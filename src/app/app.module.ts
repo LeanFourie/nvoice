@@ -1,18 +1,27 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+// Module Imports
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { AppRoutingModule } from './app-routing.module'
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+// Component Imports
+import { AppComponent } from './app.component'
+import { ButtonComponent } from './components/snippets/button/button.component'
+import { IconComponent } from './components/snippets/icon/icon.component'
 
+// Module Decl
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        ButtonComponent,
+        IconComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule
+    ],
+    providers: [],
+    bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+
+// Exports
+export class AppModule {}

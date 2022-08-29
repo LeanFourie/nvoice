@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+// Project Imports
+import { Component } from '@angular/core'
 
+// Component Decl
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
+
+// Component Exports
 export class AppComponent {
-  title = 'nvoice';
+    handleClick(): void {
+        console.log( 'Clicked' )
+    }
 }
