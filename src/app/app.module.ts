@@ -10,7 +10,8 @@ import { IconComponent } from './components/snippets/icon/icon.component';
 import { CardShellComponent } from './components/snippets/card-shell/card-shell.component';
 import { LinkComponent } from './components/snippets/link/link.component';
 import { HeaderComponent } from './components/common/header/header.component';
-import { UserComponent } from './components/snippets/user/user.component'
+import { UserComponent } from './components/snippets/user/user.component';
+import { FooterComponent } from './components/common/footer/footer.component'
 
 // Module Decl
 @NgModule({
@@ -21,7 +22,8 @@ import { UserComponent } from './components/snippets/user/user.component'
         CardShellComponent,
         LinkComponent,
         HeaderComponent,
-        UserComponent
+        UserComponent,
+        FooterComponent
     ],
     imports: [
         BrowserModule,

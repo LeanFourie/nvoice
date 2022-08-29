@@ -1,0 +1,28 @@
+<footer class="footer">
+    <!-- Left -->
+    <div class="footer__left">
+        <!-- Logo -->
+        <div class="footer__logo">
+            <snippet-icon
+                iconPath="assets/images/image_logo.svg"
+            ></snippet-icon>
+        </div>
+        <!-- ./Logo -->
+        <!-- Copyright -->
+        <p class="footer__copyright">
+            &copy; nvoice, {{ date }}
+        </p>
+        <!-- ./Copyright -->
+    </div>
+    <!-- ./Left -->
+
+    <!-- Right -->
+    <div class="footer__right">
+        <snippet-link
+            *ngFor="let link of links"
+            [url]="link.url"
+            [label]="link.label"
+        ></snippet-link>
+    </div>
+    <!-- ./Right -->
+</footer>
