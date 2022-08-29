@@ -7,7 +7,8 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { ButtonComponent } from './components/snippets/button/button.component'
 import { IconComponent } from './components/snippets/icon/icon.component';
-import { CardShellComponent } from './components/snippets/card-shell/card-shell.component'
+import { CardShellComponent } from './components/snippets/card-shell/card-shell.component';
+import { LinkComponent } from './components/snippets/link/link.component'
 
 // Module Decl
 @NgModule({
@@ -15,7 +16,8 @@ import { CardShellComponent } from './components/snippets/card-shell/card-shell.
         AppComponent,
         ButtonComponent,
         IconComponent,
-        CardShellComponent
+        CardShellComponent,
+        LinkComponent
     ],
     imports: [
         BrowserModule,

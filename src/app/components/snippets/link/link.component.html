@@ -1,0 +1,21 @@
+<a
+    [routerLink]="url"
+    class="link"
+>
+    <!-- Label -->
+    <span class="link__label">
+        {{ label }}
+    </span>
+    <!-- ./Label -->
+
+    <!-- Icon -->
+    <span
+        *ngIf="icon && icon !== ''"
+        class="link__icon"
+    >
+        <snippet-icon
+            [iconPath]="icon"
+        ></snippet-icon>
+    </span>
+    <!-- ./Icon -->
+</a>

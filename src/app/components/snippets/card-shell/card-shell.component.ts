@@ -22,7 +22,7 @@ export interface ICardShell {
 
 // Component Decl
 @Component({
-  selector: 'app-card-shell',
+  selector: 'snippet-card-shell',
   templateUrl: './card-shell.component.html',
   styleUrls: ['./card-shell.component.scss']
 })
