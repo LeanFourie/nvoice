@@ -1,4 +1,22 @@
-<snippet-button
-    icon="assets/icons/icon_arrow-right.svg"
-    (onClick)="handleClick()"
-></snippet-button>
+<div class="layout">
+    <!-- Header -->
+    <div class="layout__header">
+        <common-header
+            [links]="headerLinks"
+            [user]="user"
+        ></common-header>
+    </div>
+    <!-- ./Header -->
+
+    <!-- Page -->
+    <router-outlet></router-outlet>
+    <!-- ./Page -->
+
+    <!-- Footer -->
+    <div class="layout__footer">
+        <common-footer
+            [links]="footerLinks"
+        ></common-footer>
+    </div>
+    <!-- ./Footer -->
+</div>

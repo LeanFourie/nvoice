@@ -13,7 +13,7 @@ export interface IFooter {
 
 // Component Decl
 @Component({
-    selector: 'app-footer',
+    selector: 'common-footer',
     templateUrl: './footer.component.html',
     styleUrls: ['./footer.component.scss']
 })
