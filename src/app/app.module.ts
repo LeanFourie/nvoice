@@ -6,14 +6,16 @@ import { AppRoutingModule } from './app-routing.module'
 // Component Imports
 import { AppComponent } from './app.component'
 import { ButtonComponent } from './components/snippets/button/button.component'
-import { IconComponent } from './components/snippets/icon/icon.component'
+import { IconComponent } from './components/snippets/icon/icon.component';
+import { CardShellComponent } from './components/snippets/card-shell/card-shell.component'
 
 // Module Decl
 @NgModule({
     declarations: [
         AppComponent,
         ButtonComponent,
-        IconComponent
+        IconComponent,
+        CardShellComponent
     ],
     imports: [
         BrowserModule,
