@@ -1,19 +1,26 @@
+// Imports
+@use './../../../styles/utils/mixins.scss' as mixins;
+
+// Styles
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 32px;
+    padding: mixins.sizing( 8 );
 
     &__logo {
-        height: 80px;
-        height: 80px;
+        height: mixins.sizing( 20 );
+        height: mixins.sizing( 20 );
     }
 
     &__links {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 60px;
-        margin: 0 auto 0 60px;
+        gap: mixins.sizing( 15 );
+        margin: mixins.sizing( 0 )
+                auto
+                mixins.sizing( 0 )
+                mixins.sizing( 15 );
     }
 }

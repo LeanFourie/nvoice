@@ -1,24 +1,31 @@
+// Imports
+@use './../../../styles/utils/variables.scss' as variables;
+@use './../../../styles/utils/mixins.scss' as mixins;
+
+// Styles
 .footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 32px 172px;
+    padding:    mixins.sizing( 8 )
+                mixins.sizing( 43 );
+    border-top: mixins.sizing( .25 ) solid variables.$supportColor;
 
     &__left {
         display: flex;
-        gap: 20px;
+        gap: mixins.sizing( 5 );
         align-items: center;
         justify-content: flex-start;
     }
 
     &__logo {
-        width: 48px;
-        height: 48px;
+        width: mixins.sizing( 12 );
+        height: mixins.sizing( 12 );
     }
 
     &__right {
         display: flex;
-        gap: 60px;
+        gap: mixins.sizing( 15 );
         align-items: center;
         justify-content: flex-end;
     }
