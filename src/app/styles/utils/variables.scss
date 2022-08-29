@@ -1,0 +1,151 @@
+/****** SHARED VARIABLES ******/
+:root {
+    // Colors
+    --primaryColor-25:          #F6F7F7;
+    --primaryColor-50:          #EDEFEF;
+    --primaryColor-100:         #DBDEDE;
+    --primaryColor-200:         #B7BEBD;
+    --primaryColor-300:         #939D9D;
+    --primaryColor-400:         #6F7D7C;
+    --primaryColor:             #4B5C5B;
+    --primaryColor-600:         #3C4A49;
+    --primaryColor-700:         #2D3737;
+    --primaryColor-800:         #1E2524;
+    --primaryColor-900:         #0F1212;
+
+    --secondaryColor-25:        #FEF7F6;
+    --secondaryColor-50:        #FDEFEE;
+    --secondaryColor-100:       #FADFDC;
+    --secondaryColor-200:       #F5BFB8;
+    --secondaryColor-300:       #F19F96;
+    --secondaryColor-400:       #EC7F72;
+    --secondaryColor:           #E75F4F;
+    --secondaryColor-600:       #B94C3F;
+    --secondaryColor-700:       #8B3930;
+    --secondaryColor-800:       #5C261F;
+    --secondaryColor-900:       #2E1310;
+
+    --tertiaryColor-25:         #FEFBF6;
+    --tertiaryColor-50:         #FDF7ED;
+    --tertiaryColor-100:        #FCEFDB;
+    --tertiaryColor-200:        #F8E0B6;
+    --tertiaryColor-300:        #F6D093;
+    --tertiaryColor-400:        #F2C16E;
+    --tertiaryColor:            #EFB14A;
+    --tertiaryColor-600:        #BF8E3B;
+    --tertiaryColor-700:        #906A2D;
+    --tertiaryColor-800:        #5F471D;
+    --tertiaryColor-900:        #30230F;
+
+    --supportColor-25:          #F3F6F5;
+    --supportColor-50:          #E9EDEC;
+    --supportColor-100:         #D1DAD8;
+    --supportColor-200:         #A4B5B2;
+    --supportColor-300:         #76908B;
+    --supportColor-400:         #496B65;
+    --supportColor:             #1B463E;
+    --supportColor-600:         #163832;
+    --supportColor-700:         #102A25;
+    --supportColor-800:         #0B1C19;
+    --supportColor-900:         #050E0C;
+
+    // Sizing
+    --spacialSize:              4px;
+
+    // Fonts
+    --primaryFontFamily:        'Work Sans', -apple-system,
+                                BlinkMacSystemFont, 'Segoe UI',
+                                Roboto, Oxygen, Ubuntu,
+                                Cantarell, 'Open Sans',
+                                'Helvetica Neue', sans-serif;
+
+    // Transitions
+    --transitionFastDuration:   .14s;
+    --transitionMediumDuration: .44s;
+    --transitionSlowDuration:   .74s;
+
+    --transitionFastTiming:     cubic-bezier( .17, .67, .83, .67 );
+    --transitionMediumTiming:   cubic-bezier( .17, .67, .83, .67 );
+    --transitionSlowTiming:     cubic-bezier( .17, .67, .83, .67 );
+}
+
+/****** SASS VARIABLES ******/
+// Colors
+$primaryColor-25:          var( --primaryColor-25 );
+$primaryColor-50:          var( --primaryColor-50 );
+$primaryColor-100:         var( --primaryColor-100 );
+$primaryColor-200:         var( --primaryColor-200 );
+$primaryColor-300:         var( --primaryColor-300 );
+$primaryColor-400:         var( --primaryColor-400 );
+$primaryColor:             var( --primaryColor );
+$primaryColor-600:         var( --primaryColor-600 );
+$primaryColor-700:         var( --primaryColor-700 );
+$primaryColor-800:         var( --primaryColor-800 );
+$primaryColor-900:         var( --primaryColor-900 );
+
+$secondaryColor-25:        var( --secondaryColor-25 );
+$secondaryColor-50:        var( --secondaryColor-50 );
+$secondaryColor-100:       var( --secondaryColor-100 );
+$secondaryColor-200:       var( --secondaryColor-200 );
+$secondaryColor-300:       var( --secondaryColor-300 );
+$secondaryColor-400:       var( --secondaryColor-400 );
+$secondaryColor:           var( --secondaryColor );
+$secondaryColor-600:       var( --secondaryColor-600 );
+$secondaryColor-700:       var( --secondaryColor-700 );
+$secondaryColor-800:       var( --secondaryColor-800 );
+$secondaryColor-900:       var( --secondaryColor-900 );
+
+$tertiaryColor-25:         var( --tertiaryColor-25 );
+$tertiaryColor-50:         var( --tertiaryColor-50 );
+$tertiaryColor-100:        var( --tertiaryColor-100 );
+$tertiaryColor-200:        var( --tertiaryColor-200 );
+$tertiaryColor-300:        var( --tertiaryColor-300 );
+$tertiaryColor-400:        var( --tertiaryColor-400 );
+$tertiaryColor:            var( --tertiaryColor );
+$tertiaryColor-600:        var( --tertiaryColor-600 );
+$tertiaryColor-700:        var( --tertiaryColor-700 );
+$tertiaryColor-800:        var( --tertiaryColor-800 );
+$tertiaryColor-900:        var( --tertiaryColor-900 );
+
+$supportColor-25:          var( --supportColor-25 );
+$supportColor-50:          var( --supportColor-50 );
+$supportColor-100:         var( --supportColor-100 );
+$supportColor-200:         var( --supportColor-200 );
+$supportColor-300:         var( --supportColor-300 );
+$supportColor-400:         var( --supportColor-400 );
+$supportColor:             var( --supportColor );
+$supportColor-600:         var( --supportColor-600 );
+$supportColor-700:         var( --supportColor-700 );
+$supportColor-800:         var( --supportColor-800 );
+$supportColor-900:         var( --supportColor-900 );
+
+// Sizing
+$spacialSize:                   var( --spacialSize );
+
+// Fonts
+$primaryFontFamily:             var( --primaryFontFamily );
+
+// Transitions
+$transitionFastDuration:        var( --transitionFastDuration );
+$transitionMediumDuration:      var( --transitionMediumDuration );
+$transitionSlowDuration:        var( --transitionSlowDuration );
+
+$transitionFastTiming:          var( --transitionFastTiming );
+$transitionMediumTiming:        var( --transitionMediumTiming );
+$transitionSlowTiming:          var( --transitionSlowTiming );
+
+// Shadows
+$shadowSizeSmall:               calc( #{ $spacialSize } * 1 );
+$shadowSizeMedium:              calc( #{ $spacialSize } * 2 );
+$shadowSizeLarge:               calc( #{ $spacialSize } * 3 );
+$shadowSizeExtraLarge:          calc( #{ $spacialSize } * 4 );
+
+$shadowBlurSmall:               calc( #{ $spacialSize } * 2 );
+$shadowBlurMedium:              calc( #{ $spacialSize } * 4 );
+$shadowBlurLarge:               calc( #{ $spacialSize } * 6 );
+$shadowBlurExtraLarge:          calc( #{ $spacialSize } * 8 );
+
+$shadowPropsSmall:              0 $shadowSizeSmall $shadowBlurSmall;
+$shadowPropsMedium:             0 $shadowSizeMedium $shadowBlurMedium;
+$shadowPropsLarge:              0 $shadowSizeLarge $shadowBlurLarge;
+$shadowPropsExtraLarge:         0 $shadowSizeExtraLarge $shadowBlurExtraLarge;

@@ -1,0 +1,45 @@
+// Imports
+@use './../utils/variables' as variables;
+@use './../utils/mixins.scss' as mixins;
+
+* {
+    box-sizing: border-box;
+    font-family: variables.$primaryFontFamily;
+    font-smooth: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &::selection {
+        background: variables.$primaryColor-200;
+        color: variables.$supportColor;
+        stroke: variables.$supportColor;
+    }
+
+    &::-moz-selection {
+        background: variables.$primaryColor-200;
+        color: variables.$supportColor;
+        stroke: variables.$supportColor;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: mixins.sizing( 0 );
+}
+
+button,
+a {
+    width: auto;
+    height: auto;
+    text-decoration: none;
+
+    &:active, &:focus,
+    &:hover, &:visited {
+        box-shadow: none;
+        outline: none;
+        text-decoration: none;
+    }
+}

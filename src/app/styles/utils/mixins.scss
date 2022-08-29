@@ -1,0 +1,106 @@
+// Imports
+@use './variables' as variables;
+
+// Transition
+@mixin transition(
+    $propertiesToAnimate,
+    $timing,
+    $duration
+) {
+    transition: $propertiesToAnimate $timing $duration;
+    -webkit-transition: $propertiesToAnimate $timing $duration;
+    -o-transition: $propertiesToAnimate $timing $duration;
+}
+
+// Transform
+@mixin transform( $property ) {
+    transform: $property;
+    -webkit-transform: $property;
+    -o-transform: $property;
+}
+
+// Animation
+@mixin animation(
+    $property,
+    $duration,
+    $count
+) {
+    animation-duration: $duration;
+    animation-name: $property;
+    animation-fill-mode: both;
+    animation-iteration-count: $count;
+}
+
+// Box Shadow
+@mixin boxShadow(
+    $shadowProps,
+    $shadowColor
+) {
+    box-shadow: $shadowProps $shadowColor;
+}
+
+// Fit image
+@mixin fitImage( $size ) {
+    width: 100%;
+    height: 100%;
+    object-fit: $size;
+    display: block;
+}
+
+// Sizing
+@function sizing( $size ) {
+    @return calc( #{ $size } * #{ variables.$spacialSize } );
+}
+
+@mixin borderRadiusRound {
+    border-radius: 50%;
+}
+
+/*** Responsive Queries ***/
+@mixin maxWidth-1600 {
+    @media screen and ( max-width: 1600px ) {
+        @content;
+    }
+}
+
+@mixin maxWidth-1500 {
+    @media screen and ( max-width: 1500px ) {
+        @content;
+    }
+}
+
+@mixin maxWidth-1400 {
+    @media screen and ( max-width: 1400px ) {
+        @content;
+    }
+}
+
+@mixin maxWidth-1200 {
+    @media screen and ( max-width: 1200px ) {
+        @content;
+    }
+}
+
+@mixin maxWidth-900 {
+    @media screen and ( max-width: 900px ) {
+        @content;
+    }
+}
+
+@mixin maxWidth-750 {
+    @media screen and ( max-width: 750px ) {
+        @content;
+    }
+}
+
+@mixin maxWidth-600 {
+    @media screen and ( max-width: 600px ) {
+        @content;
+    }
+}
+
+@mixin maxWidth-400 {
+    @media screen and ( max-width: 400px ) {
+        @content;
+    }
+}
