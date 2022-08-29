@@ -1,0 +1,26 @@
+<div class="user">
+    <!-- Name -->
+    <p class="user__name">
+        {{ user.username }}
+    </p>
+    <!-- ./Name -->
+
+    <!-- Photo -->
+    <div class="user__photo">
+        <!-- Image -->
+        <img
+            *ngIf="user.photo && user.photo !== ''; else fallbackSVG"
+            [src]="user.photo"
+            alt=""
+        />
+        <!-- ./Image -->
+        <!-- Fallback SVG -->
+        <ng-template #fallbackSVG>
+            <snippet-icon
+                iconPath="assets/icons/icon_user.svg"
+            ></snippet-icon>
+        </ng-template>
+        <!-- ./Fallback SVG -->
+    </div>
+    <!-- ./Photo -->
+</div>

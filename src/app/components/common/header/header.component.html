@@ -1,0 +1,27 @@
+<header class="header">
+    <!-- Logo -->
+    <div class="header__logo">
+        <snippet-icon
+            iconPath="assets/images/image_logo.svg"
+        ></snippet-icon>
+    </div>
+    <!-- ./Logo -->
+
+    <!-- Links -->
+    <div class="header__links">
+        <snippet-link
+            *ngFor="let link of links"
+            [url]="link.url"
+            [label]="link.label"
+        ></snippet-link>
+    </div>
+    <!-- ./Links -->
+
+    <!-- User -->
+    <div class="header__user">
+        <snippet-user
+            [user]="user"
+        ></snippet-user>
+    </div>
+    <!-- ./User -->
+</header>

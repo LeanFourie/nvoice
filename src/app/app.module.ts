@@ -8,7 +8,9 @@ import { AppComponent } from './app.component'
 import { ButtonComponent } from './components/snippets/button/button.component'
 import { IconComponent } from './components/snippets/icon/icon.component';
 import { CardShellComponent } from './components/snippets/card-shell/card-shell.component';
-import { LinkComponent } from './components/snippets/link/link.component'
+import { LinkComponent } from './components/snippets/link/link.component';
+import { HeaderComponent } from './components/common/header/header.component';
+import { UserComponent } from './components/snippets/user/user.component'
 
 // Module Decl
 @NgModule({
@@ -17,7 +19,9 @@ import { LinkComponent } from './components/snippets/link/link.component'
         ButtonComponent,
         IconComponent,
         CardShellComponent,
-        LinkComponent
+        LinkComponent,
+        HeaderComponent,
+        UserComponent
     ],
     imports: [
         BrowserModule,
