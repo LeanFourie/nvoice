@@ -8,6 +8,10 @@ import {
 // Interface
 import { ILink } from '../../snippets/link/link.component'
 export interface IFooter {
+    /**
+     * A set of links used within the footer
+     *
+     */
     links: ILink[]
 }
 

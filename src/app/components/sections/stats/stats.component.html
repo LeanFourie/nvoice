@@ -1,0 +1,132 @@
+<div class="stats">
+    <!-- Top -->
+    <div class="stats__row stats__row--top">
+        <!-- Invoice Comparison -->
+        <div class="stats__col stats__col--comparison">
+            <snippet-card-shell
+                color="green"
+            >
+                <div class="stats__comparison">
+                    <div class="stats__comparisonText">
+                        <div class="stats__comparisonIcon">
+                            <snippet-icon
+                                iconPath="assets/icons/icon_money-note.svg"
+                                color="( --whiteColor )"
+                            ></snippet-icon>
+                        </div>
+                        <p class="stats__comparisonTitle">
+                            Invoice comparison
+                        </p>
+                    </div>
+                    <div
+                        class="stats__comparisonGraph"
+                        [attr.data-min]="0"
+                        [attr.data-max]="invoicesSent"
+                    >
+                        <div
+                            class="stats__comparisonBar"
+                            [attr.data-label]="'Sent'"
+                        ></div>
+                        <div
+                            class="stats__comparisonBar"
+                            [ngStyle]="{ 'height': ( invoicesPaid / invoicesSent * 100 ) + '%' }"
+                            [attr.data-label]="'Paid'"
+                        ></div>
+                    </div>
+                </div>
+            </snippet-card-shell>
+        </div>
+        <!-- ./Invoice Comparison -->
+        <!-- Invoices -->
+        <div class="stats__col stats__col--invoices">
+            <snippet-card-shell
+                color="red"
+            >
+                <div class="stats__invoices">
+                    <div class="stats__invoicesHeading">
+                        <p class="stats__invoicesTitle">
+                            Invoices
+                        </p>
+                        <h2 class="stats__invoicesValue">
+                            {{ invoicesSent }}
+                        </h2>
+                        <div class="stats__invoicesAction">
+                            <snippet-button
+                                icon="assets/icons/icon_arrow-right.svg"
+                            ></snippet-button>
+                        </div>
+                    </div>
+                    <div class="stats__invoicesLinks">
+                        <div
+                            *ngFor="let link of invoiceLinks"
+                            class="stats__invoicesLink"
+                        >
+                            <div class="stats__invoicesLinkIcon">
+                                <snippet-icon
+                                    [iconPath]="link.icon"
+                                    color="( --whiteColor )"
+                                ></snippet-icon>
+                            </div>
+                            <p class="stats__invoicesLinkLabel">
+                                {{ link.label }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </snippet-card-shell>
+        </div>
+        <!-- ./Invoices -->
+        <!-- New Invoices -->
+        <div class="stats__col stats__col--new-invoices">
+            <div class="stats__pie-chart">
+                <ngx-charts-pie-chart
+                    [view]="pieChartView"
+                    [legend]="false"
+                    [explodeSlices]="true"
+                    [results]="pieChartData"
+                    [customColors]="pieChartDataColorScheme"
+                >
+                </ngx-charts-pie-chart>
+            </div>
+            <div class="stats__pie-text">
+                <p class="stats__pie-textTitle">
+                    New invoices this month
+                </p>
+                <p class="stats__pie-textSubtitle">
+                    + {{ pieChartData[ 1 ].value - pieChartData[ 0 ].value }}
+                </p>
+                <div class="stats__pie-textAction">
+                    <snippet-button
+                        icon="assets/icons/icon_arrow-right.svg"
+                        shape="round"
+                    ></snippet-button>
+                </div>
+            </div>
+        </div>
+        <!-- ./New Invoices -->
+    </div>
+    <!-- ./Top -->
+
+    <!-- Bottom -->
+    <div class="stats__row stats__row--bottom">
+        <div
+            *ngFor="let item of numberStats"
+            class="stats__col"
+        >
+            <div class="stats__numbers-group">
+                <div class="stats__numbers-groupHeading">
+                    <h3 class="stats__numbers-groupSubtitle">
+                        {{ item.subtitle }}
+                    </h3>
+                    <h1 class="stats__numbers-groupTitle">
+                        {{ item.title }}
+                    </h1>
+                </div>
+                <p class="stats__numbers-groupContent">
+                    {{ item.description }}
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- ./Bottom -->
+</div>

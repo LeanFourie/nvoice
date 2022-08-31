@@ -1,0 +1,12 @@
+<swiper [pagination]="{ clickable: true }">
+    <!-- Slides -->
+    <ng-template
+        swiperSlide
+        *ngFor="let slide of slides"
+    >
+        <snippet-info-card-slide
+            [slide]="slide"
+        ></snippet-info-card-slide>
+    </ng-template>
+    <!-- ./Slides -->
+</swiper>

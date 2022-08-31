@@ -23,4 +23,11 @@
                 mixins.sizing( 0 )
                 mixins.sizing( 15 );
     }
+
+    &__user {
+        margin: mixins.sizing( 0 )
+                mixins.sizing( 2 )
+                mixins.sizing( 0 )
+                mixins.sizing( 0 );
+    }
 }

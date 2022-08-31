@@ -1,0 +1,51 @@
+<div class="profile">
+    <!-- Image -->
+    <div class="profile__image">
+        <img
+            class="profile__imageElement"
+            src="assets/images/image_profile.png"
+            alt="Profile photo"
+        />
+    </div>
+    <!-- ./Image -->
+
+
+    <!-- Details -->
+    <div class="profile__info">
+        <snippet-card-shell
+            color="green"
+            shade="light"
+        >
+            <div class="profile__card">
+                <div class="profile__link">
+                    <snippet-button
+                        icon="assets/icons/icon_arrow-right.svg"
+                    ></snippet-button>
+                </div>
+                <h3 class="profile__title">
+                    Set up your profile
+                </h3>
+                <p class="profile__description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                </p>
+                <div class="profile__items">
+                    <div
+                        *ngFor="let item of profileItems"
+                        class="profile__item"
+                    >
+                        <div class="profile__itemIcon">
+                            <snippet-icon
+                                [iconPath]="item.icon"
+                                strokeColor="var( --primaryColor-400 )"
+                            ></snippet-icon>
+                        </div>
+                        <h4 class="profile__itemLabel">
+                            {{ item.label }}
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </snippet-card-shell>
+    </div>
+    <!-- ./Details 2 -->
+</div>

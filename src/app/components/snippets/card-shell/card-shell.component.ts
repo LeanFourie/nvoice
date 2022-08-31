@@ -18,6 +18,12 @@ export interface ICardShell {
      *
      */
     shade?: 'light' | 'dark'
+
+    /**
+     * An optional class for the card
+     *
+     */
+    class?: string
 }
 
 // Component Decl
@@ -32,6 +38,7 @@ export class CardShellComponent implements OnInit {
     // Inputs
     @Input() color: ICardShell[ 'color' ] = 'green'
     @Input() shade: ICardShell[ 'shade' ] = 'dark'
+    @Input() class?: ICardShell[ 'class' ]
 
     // Constructor
      constructor() {}

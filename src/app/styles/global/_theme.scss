@@ -28,6 +28,7 @@ html {
 
 body {
     margin: mixins.sizing( 0 );
+    background: variables.$backgroundColor;
 }
 
 button,

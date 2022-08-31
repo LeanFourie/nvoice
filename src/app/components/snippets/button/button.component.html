@@ -1,6 +1,6 @@
 <button
     class="button"
-    ngClass="'button--' + shape"
+    [ngClass]="'button--' + shape"
     (click)="handleClick()"
 >
     <!-- Icon -->

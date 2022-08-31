@@ -49,6 +49,10 @@
     --supportColor-800:         #0B1C19;
     --supportColor-900:         #050E0C;
 
+    --whiteColor:               #FFFFFF;
+    --blackColor:               #000000;
+    --backgroundColor:          #F3F7F5;
+
     // Sizing
     --spacialSize:              4px;
 
@@ -118,6 +122,10 @@ $supportColor-600:         var( --supportColor-600 );
 $supportColor-700:         var( --supportColor-700 );
 $supportColor-800:         var( --supportColor-800 );
 $supportColor-900:         var( --supportColor-900 );
+
+$whiteColor:                var( --whiteColor );
+$blackColor:                var( --blackColor );
+$backgroundColor:           var( --backgroundColor );
 
 // Sizing
 $spacialSize:                   var( --spacialSize );

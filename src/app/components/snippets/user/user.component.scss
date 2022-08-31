@@ -1,17 +1,23 @@
+// Imports
+@use './../../../styles/utils/variables.scss' as variables;
+@use './../../../styles/utils/mixins.scss' as mixins;
+
+// Styles
 .user {
     display: inline-flex;
-    gap: 24px;
+    gap: mixins.sizing( 6 );
     align-items: center;
     justify-content: flex-end;
 
     &__photo {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
+        @include mixins.borderRadiusRound;
+        width: mixins.sizing( 12 );
+        height: mixins.sizing( 12 );
         overflow: hidden;
     }
 
     &__fallback {
-        padding: 8px;
+        padding: mixins.sizing( 2 );
+        background: variables.$supportColor;
     }
 }

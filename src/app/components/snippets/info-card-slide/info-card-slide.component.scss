@@ -1,0 +1,26 @@
+// Imports
+@use './../../../styles/utils/variables.scss' as variables;
+@use './../../../styles/utils/mixins.scss' as mixins;
+
+// Styles
+.slide {
+    display: flex;
+    flex-direction: column;
+    gap: mixins.sizing( 5 );
+    margin: mixins.sizing( 8 )
+            mixins.sizing( 0 )
+            mixins.sizing( 0 );
+    padding: mixins.sizing( 8 )
+            mixins.sizing( 0 )
+            mixins.sizing( 0 );
+    border-top: mixins.sizing( .25 ) solid variables.$primaryColor-400;
+
+    &__title,
+    &__paragraph {
+        color: variables.$whiteColor;
+    }
+
+    &__paragraph {
+        opacity: .6;
+    }
+}

@@ -1,0 +1,98 @@
+// Imports
+@use './../../../styles/utils/variables.scss' as variables;
+@use './../../../styles/utils/mixins.scss' as mixins;
+
+// Styles
+.cards {
+    display: grid;
+    grid-template-columns: repeat( 3, 33.333% );
+    gap: mixins.sizing( 5 );
+
+    > * {
+        &:nth-child( 1 ) {
+            @include mixins.transform( translateY( mixins.sizing( 15 ) ) );
+        }
+
+        &:nth-child( 3 ) {
+            @include mixins.transform( translateY( mixins.sizing( 20 ) ) );
+        }
+    }
+
+    &__item {
+        position: relative;
+        padding: mixins.sizing( 8 );
+
+        &--1 {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            position: relative;
+
+            .cards {
+                &__title {
+                    color: variables.$whiteColor;
+                }
+
+                &__carousel {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &__action {
+                    position: absolute;
+                    bottom: mixins.sizing( 8 );
+                    right: mixins.sizing( 8 );
+                    z-index: 2;
+                }
+            }
+        }
+
+        &--2 {
+            .cards {
+                &__image {
+                    width: calc( 100% + mixins.sizing( 8 ) );
+                    margin: mixins.sizing( 12 )
+                            mixins.sizing( -8 )
+                            mixins.sizing( 0 )
+                            mixins.sizing( 0 );
+                }
+
+                &__action {
+                    position: absolute;
+                    bottom: mixins.sizing( 8 );
+                    right: mixins.sizing( 8 );
+                    z-index: 2;
+                }
+            }
+        }
+
+        &--3 {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            .cards {
+                &__title,
+                &__paragraph {
+                    color: variables.$whiteColor;
+                }
+
+                &__paragraph {
+                    margin: mixins.sizing( 7 )
+                            mixins.sizing( 0 )
+                            mixins.sizing( 8 );
+                }
+
+                &__action {
+                    margin: auto
+                            mixins.sizing( 0 )
+                            mixins.sizing( 0 );
+                }
+            }
+        }
+    }
+}

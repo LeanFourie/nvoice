@@ -1,0 +1,23 @@
+// Imports
+@use './../utils/variables' as variables;
+@use './../utils/mixins.scss' as mixins;
+
+// Styles
+.swiper {
+    height: 100%;
+
+    &.swiper-horizontal {
+        .swiper-pagination {
+            &.swiper-pagination-horizontal {
+                bottom: mixins.sizing( 2 );
+                text-align: left;
+
+                .swiper-pagination-bullet {
+                    width: mixins.sizing( 3 );
+                    height: mixins.sizing( 3 );
+                    background: variables.$tertiaryColor;
+                }
+            }
+        }
+    }
+}

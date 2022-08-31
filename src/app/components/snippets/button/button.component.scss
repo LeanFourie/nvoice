@@ -1,0 +1,26 @@
+// Imports
+@use './../../../styles/utils/variables.scss' as variables;
+@use './../../../styles/utils/mixins.scss' as mixins;
+
+// Styles
+.button {
+    @include mixins.transition( all, variables.$transitionFastDuration, variables.$transitionFastTiming );
+    width: mixins.sizing( 10 );
+    height: mixins.sizing( 10 );
+    padding: mixins.sizing( 2 );
+    background: variables.$supportColor;
+    border: none;
+    cursor: pointer;
+
+    &--round {
+        @include mixins.borderRadiusRound;
+    }
+
+    &:hover {
+        background: variables.$primaryColor;
+    }
+
+    &:active {
+        background: variables.$primaryColor-700;
+    }
+}

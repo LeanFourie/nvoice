@@ -1,0 +1,32 @@
+// Imports
+@use './../../../styles/utils/variables.scss' as variables;
+@use './../../../styles/utils/mixins.scss' as mixins;
+
+// Styles
+.link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &__label {
+        @include mixins.transition( all, variables.$transitionFastDuration, variables.$transitionFastTiming );
+        color: variables.$primaryColor;
+        line-height: mixins.sizing( 4 );
+        font-size: mixins.sizing( 4 );
+        font-weight: 400;
+
+        &:hover {
+            color: variables.$secondaryColor;
+        }
+    }
+
+    &__icon {
+        width: mixins.sizing( 6 );
+        height: mixins.sizing( 6 );
+        display: inline-block;
+        margin: mixins.sizing( 0 )
+                mixins.sizing( 0 )
+                mixins.sizing( 0 )
+                mixins.sizing( 3 );
+    }
+}

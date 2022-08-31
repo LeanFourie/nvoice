@@ -1,0 +1,66 @@
+<div class="cards">
+    <!-- Card 1 -->
+    <snippet-card-shell
+        color="green"
+    >
+        <div class="cards__item cards__item--1">
+            <h3 class="cards__title">
+                Create a custom design
+            </h3>
+            <div class="cards__carousel">
+                <common-carousel
+                    [slides]="designSlides"
+                ></common-carousel>
+            </div>
+            <div class="cards__action">
+                <snippet-button
+                    icon="assets/icons/icon_arrow-right.svg"
+                ></snippet-button>
+            </div>
+        </div>
+    </snippet-card-shell>
+    <!-- ./Card 1 -->
+
+
+    <!-- Card 2 -->
+    <snippet-card-shell
+        color="yellow"
+    >
+        <div class="cards__item cards__item--2">
+            <h3 class="cards__title">
+                Add your brand to invoices
+            </h3>
+            <img
+                src="assets/images/image_branding-example.svg"
+                alt="Brand example"
+                class="cards__image"
+            />
+            <div class="cards__action">
+                <snippet-button
+                    icon="assets/icons/icon_arrow-right.svg"
+                ></snippet-button>
+            </div>
+        </div>
+    </snippet-card-shell>
+    <!-- ./Card 2 -->
+
+    <!-- Card 3 -->
+    <snippet-card-shell
+        color="red"
+    >
+        <div class="cards__item cards__item--3">
+            <h3 class="cards__title">
+                Send invoice requests
+            </h3>
+            <p class="cards__paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            </p>
+            <div class="cards__action">
+                <snippet-button
+                    icon="assets/icons/icon_arrow-right.svg"
+                ></snippet-button>
+            </div>
+        </div>
+    </snippet-card-shell>
+    <!-- ./Card 3 -->
+</div>

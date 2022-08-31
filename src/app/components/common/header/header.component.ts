@@ -9,7 +9,16 @@ import {
 import { ILink } from '../../snippets/link/link.component'
 import { IUser } from '../../snippets/user/user.component'
 export interface IHeader {
+    /**
+     * A set of links used within the header
+     *
+     */
     links: ILink[]
+
+    /**
+     * The user component interface
+     *
+     */
     user: IUser
 }
 

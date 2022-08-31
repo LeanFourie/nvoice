@@ -12,7 +12,20 @@ import {
 
 // Interface
 export interface IIcon {
+    /**
+     * The src path for the svg icon
+     *
+     */
     iconPath: string
+
+    /**
+     * The icon stroke color
+     *
+     */
+    strokeColor:    'var( --primaryColor )' |
+                    'var( --primaryColor-400 )' |
+                    'var( --primaryColor-700 )' |
+                    'var( --whiteColor )'
 }
 
 // Component Decl
@@ -30,6 +43,7 @@ export class IconComponent implements OnInit {
 
     // Inputs
     @Input() iconPath: IIcon[ 'iconPath' ]
+    @Input() strokeColor?: IIcon[ 'strokeColor' ] = 'var( --whiteColor )'
 
     // Variables
     svgElement: SafeHtml
@@ -82,6 +96,12 @@ export class IconComponent implements OnInit {
                         svgElement.style.display = 'block'
                         // Keep the image aspect ratio
                         svgElement.style.objectFit = 'contain'
+
+                        const strokePaths = svgElement.querySelectorAll( '[ stroke ]' )
+                        const strokePathsArray = Array.from( strokePaths ) as HTMLElement[]
+                        strokePathsArray.forEach( path => {
+                            path.style.stroke = this.strokeColor!
+                        })
 
                         // Save the SVG element as safe html
                         this.svgElement = this.sanitizer.bypassSecurityTrustHtml(

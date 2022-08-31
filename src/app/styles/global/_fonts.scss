@@ -1,0 +1,44 @@
+// Imports
+@use './../utils/variables.scss' as variables;
+@use './../utils/mixins.scss' as mixins;
+
+// Styles
+h1 {
+    margin: 0;
+    color: variables.$supportColor;
+    line-height: mixins.sizing( 18 );
+    font-size: mixins.sizing( 15 );
+    font-weight: 500;
+}
+
+h2 {
+    margin: 0;
+    color: variables.$supportColor;
+    line-height: mixins.sizing( 12 );
+    font-size: mixins.sizing( 10 );
+    font-weight: 500;
+}
+
+h3 {
+    margin: 0;
+    color: variables.$supportColor;
+    line-height: mixins.sizing( 10 );
+    font-size: mixins.sizing( 8 );
+    font-weight: 500;
+}
+
+h4 {
+    margin: 0;
+    color: variables.$supportColor;
+    line-height: mixins.sizing( 6 );
+    font-size: mixins.sizing( 5 );
+    font-weight: 500;
+}
+
+p {
+    margin: 0;
+    color: variables.$supportColor;
+    line-height: mixins.sizing( 7 );
+    font-size: mixins.sizing( 4 );
+    font-weight: 400;
+}

@@ -1,0 +1,326 @@
+// Imports
+@use './../../../styles/utils/variables.scss' as variables;
+@use './../../../styles/utils/mixins.scss' as mixins;
+
+// Styles
+.stats {
+    display: grid;
+    gap: mixins.sizing( 22 );
+    position: relative;
+    padding:    mixins.sizing( 0 )
+                mixins.sizing( 0 )
+                mixins.sizing( 5 );
+
+    &::after {
+        content: '';
+        width: mixins.sizing( .25 );
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: calc( 33.333% / 1.5 );
+        background: variables.$primaryColor-100;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: repeat( 3, 33.333% );
+        gap: mixins.sizing( 5 );
+    }
+
+    &__numbers-group {
+        display: grid;
+        gap: mixins.sizing( 1 );
+
+        &Heading {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        &Subtitle {
+            @include mixins.transform( translateY( mixins.sizing( -2 ) ) );
+            margin: mixins.sizing( 0 )
+                    mixins.sizing( 2 )
+                    mixins.sizing( 0 )
+                    mixins.sizing( 0 );
+        }
+
+        &Content {
+            max-width: mixins.sizing( 42 );
+            margin: mixins.sizing( 0 )
+                    mixins.sizing( 0 )
+                    mixins.sizing( 0 )
+                    mixins.sizing( 8 );
+        }
+    }
+
+    &__pie-chart {
+        @include mixins.transform( translateX( mixins.sizing( -5 ) ) );
+    }
+
+    &__pie-text {
+        position: relative;
+        padding:    mixins.sizing( 0 )
+                    mixins.sizing( 0 )
+                    mixins.sizing( 0 )
+                    mixins.sizing( 3 );
+
+        &Title,
+        &Subtitle {
+            max-width: mixins.sizing( 28 );
+        }
+
+        &Title {
+            line-height: mixins.sizing( 4 );
+            font-size: mixins.sizing( 3.5 );
+        }
+
+        &Subtitle {
+            margin: mixins.sizing( 2 )
+                    mixins.sizing( 0 )
+                    mixins.sizing( 0 );
+            font-weight: 500;
+        }
+
+        &Action {
+            position: absolute;
+            top: mixins.sizing( 40 );
+            right: mixins.sizing( 0 );
+        }
+    }
+
+    &__col {
+        &--comparison {
+            @include mixins.transform( translateY( mixins.sizing( 7 ) ) );
+            position: relative;
+            z-index: 2;
+
+            &::before {
+                content: '';
+                width: calc( 200% - mixins.sizing( 5 ) );
+                height: 100%;
+                position: absolute;
+                top: mixins.sizing( -7 );
+                left: mixins.sizing( 5 );
+                background: variables.$secondaryColor;
+                z-index: -1;
+            }
+        }
+
+        &--invoices {
+            position: relative;
+            z-index: 2;
+        }
+
+        &--new-invoices {
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 50%;
+                height: mixins.sizing( .25 );
+                position: absolute;
+                top: calc( 100% + mixins.sizing( 7 ) );
+                right: 0;
+                background: variables.$primaryColor-100;
+            }
+        }
+
+        &:last-child {
+            position: relative;
+            padding:    mixins.sizing( 0 )
+                        mixins.sizing( 0 )
+                        mixins.sizing( 0 )
+                        50%;
+
+            .stats {
+                &__numbers-group {
+                    &Heading {
+                        flex-direction: row-reverse;
+                        justify-content: flex-end;
+                    }
+
+                    &Subtitle {
+                        margin: mixins.sizing( 0 )
+                                mixins.sizing( 0 )
+                                mixins.sizing( 0 )
+                                mixins.sizing( 2 );
+                    }
+
+                    &Content {
+                        margin: mixins.sizing( 0 );
+                    }
+                }
+            }
+        }
+    }
+    
+    &__comparison {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: mixins.sizing( 4 );
+
+        &Text {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        &Icon {
+            @include mixins.borderRadiusRound;
+            width: mixins.sizing( 8 );
+            height: mixins.sizing( 8 );
+            position: relative;
+            margin: mixins.sizing( 0 )
+                    mixins.sizing( 4 )
+                    mixins.sizing( 0 )
+                    mixins.sizing( 0 );
+            padding: mixins.sizing( 2 );
+
+            &::before {
+                @include mixins.borderRadiusRound;
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: variables.$whiteColor;
+                opacity: .1;
+            }
+        }
+
+        &Title {
+            color: variables.$whiteColor;
+        }
+
+        &Graph {
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat( 2, 50% );
+            align-items: flex-end;
+            position: relative;
+            padding:    mixins.sizing( 6 )
+                        mixins.sizing( 0 )
+                        mixins.sizing( 6 )
+                        mixins.sizing( 8 );
+
+            &::before,
+            &::after {
+                position: absolute;
+                left: 0;
+                color: variables.$whiteColor;
+                text-align: right;
+                font-size: mixins.sizing( 3 );
+                font-weight: 500;
+                opacity: .5;
+            }
+
+            &::before {
+                content: attr( data-max );
+                top: mixins.sizing( 6 );
+            }
+
+            &::after {
+                content: attr( data-min );
+                bottom: mixins.sizing( 6 );
+            }
+        }
+
+        &Bar {
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            &::after {
+                @include mixins.transform( translateX( -50% ) );
+                content: attr( data-label );
+                position: absolute;
+                left: 50%;
+                top: calc( 100% + mixins.sizing( 3 ) );
+                color: variables.$whiteColor;
+                text-align: center;
+                font-size: mixins.sizing( 3 );
+                font-weight: 500;
+            }
+
+            &:nth-child( 1 ) {
+                height: 100%;
+                border-top: mixins.sizing( .5 ) solid variables.$tertiaryColor;
+
+                &::before {
+                    background: linear-gradient( to bottom, variables.$tertiaryColor, transparent );
+                    opacity: .6;
+                }
+            }
+
+            &:nth-child( 2 ) {
+                border-top: mixins.sizing( .5 ) solid variables.$primaryColor-300;
+
+                &::before {
+                    background: linear-gradient( to bottom, variables.$primaryColor-400, transparent );
+                    opacity: .7;
+                }
+            }
+        }
+    }
+
+    &__invoices {
+        padding:    mixins.sizing( 7 )
+                    mixins.sizing( 5 )
+                    mixins.sizing( 5 )
+                    mixins.sizing( 10 );
+
+        &Heading {
+            position: relative;
+        }
+
+        &Title,
+        &Value {
+            color: variables.$whiteColor;
+        }
+
+        &Action {
+            position: absolute;
+            top: mixins.sizing( 0 );
+            right: mixins.sizing( 0 );
+        }
+
+        &Links {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: mixins.sizing( 18 )
+                    mixins.sizing( 0 )
+                    mixins.sizing( 0 );
+        }
+
+        &Link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            &Icon {
+                width: mixins.sizing( 6 );
+                height: mixins.sizing( 6 );
+            }
+
+            &Label {
+                margin: mixins.sizing( 2 )
+                        mixins.sizing( 0 )
+                        mixins.sizing( 0 );
+                color: variables.$whiteColor;
+                font-weight: 500;
+            }
+        }
+    }
+}

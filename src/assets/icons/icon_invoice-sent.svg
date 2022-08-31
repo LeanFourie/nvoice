@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Mail_Email_Letter_Send" data-name="Mail, Email, Letter, Send" transform="translate(0 -0.028)">
+    <g id="Group_4" data-name="Group 4">
+      <path id="Path_4" data-name="Path 4" d="M20,6.039v6.989" fill="none" stroke="#f3f7f5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_5" data-name="Path 5" d="M21,19.028H15" fill="none" stroke="#f3f7f5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_6" data-name="Path 6" d="M19,17.028l2,2-2,2" fill="none" stroke="#f3f7f5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_7" data-name="Path 7" d="M11,17.028H5a2,2,0,0,1-2-2V6.039" fill="none" stroke="#f3f7f5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_8" data-name="Path 8" d="M5.011,4.028H17.99A2.011,2.011,0,0,1,20,6.039h0A2.01,2.01,0,0,1,19.118,7.7l-5.357,3.631a4.031,4.031,0,0,1-4.522,0L3.883,7.7A2.011,2.011,0,0,1,3,6.04H3A2.011,2.011,0,0,1,5.011,4.028Z" fill="none" stroke="#f3f7f5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+    <path id="Path_9" data-name="Path 9" d="M24,.028H0v24H24v-24Z" fill="none"/>
+  </g>
+</svg>

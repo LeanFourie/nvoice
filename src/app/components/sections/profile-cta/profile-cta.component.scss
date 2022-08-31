@@ -1,0 +1,73 @@
+// Imports
+@use './../../../styles/utils/variables.scss' as variables;
+@use './../../../styles/utils/mixins.scss' as mixins;
+
+// Styles
+.profile {
+    display: grid;
+    grid-template-columns: repeat( 3, 33.333% );
+    gap: mixins.sizing( 5 );
+
+    &__image {
+        width: 100%;
+        position: relative;
+        padding: 100% 0 0;
+
+        &Element {
+            @include mixins.fitImage( cover );
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__info {
+        grid-column: 2 / span 2;
+
+        > * {
+            height: 100%;
+        }
+    }
+
+    &__card {
+        position: relative;
+        padding:    mixins.sizing( 16 )
+                    mixins.sizing( 13 );
+    }
+
+    &__link {
+        position: absolute;
+        top: mixins.sizing( 16 );
+        right: mixins.sizing( 13 );
+    }
+
+    &__title,
+    &__description {
+        max-width: mixins.sizing( 124 );
+    }
+
+    &__description {
+        margin: mixins.sizing( 6 )
+                mixins.sizing( 0 )
+                mixins.sizing( 13 );
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: mixins.sizing( 9 ) 1fr;
+        gap: mixins.sizing( 2 );
+        align-items: center;
+        justify-content: flex-start;
+
+        &Icon {
+            width: mixins.sizing( 9 );
+            height: mixins.sizing( 9 );
+        }
+    }
+}
